@@ -1,0 +1,29 @@
+{
+  "name": "tetrio-proxy",
+  "version": "1.0.0",
+  "description": "A TETR.IO proxy for people who want to play TETR.IO on their own proxy...",
+  "type": "module",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js",
+    "refresh": "node ./src/refresh.js"
+  },
+  "keywords": [
+    "proxy",
+    "tetrio"
+  ],
+  "author": "Vexcited",
+  "license": "MIT",
+  "dependencies": {
+    "bufferutil": "^4.0.6",
+    "express": "^4.18.1",
+    "got": "^12.1.0",
+    "tinyws": "^0.1.0",
+    "utf-8-validate": "^5.0.9",
+    "ws": "^8.8.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "nodemon": "^2.0.16"
+  }
+}
