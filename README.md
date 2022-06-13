@@ -1,6 +1,6 @@
 # TETR.IO - Self-Proxy
 
-> This proxy is mainly used to bypass restrictions in some networks. Also, **this script is not associated with or created by [TETR.IO](https://tetr.io) or [osk](https://osk.sh)**
+> This proxy is mainly used to bypass restrictions in some networks. Also, **this script is not associated with or created by [TETR.IO](https://tetr.io) or [osk](https://osk.sh)**.
 
 ## Motivation
 
@@ -12,18 +12,22 @@ play TETR.IO without any restrictions !
 
 ## How it works ?
 
-Basically, we download all the scripts and textures from TETR.IO and serve them ourselves so we can
-bypass the Cloudflare browser check - that a lot of online proxies can't actually pass.
+Basically, we download all the resources from TETR.IO and serve them ourselves so we can bypass the Cloudflare browser check - that a lot of online proxies can't actually pass.
 
-To accomplish this, I made a JS script in `./src/update.js` that updates and/or downloads the files from
-TETR.IO.
+For API endpoints, we proxy them by updating the endpointsin the `public/js/tetrio.js` and `public/index.html` files.
 
 ## Usage
 
-Before following these steps, check if you have installed Node.JS and PNPm.
+Before following these steps, check if you have installed Node.JS (`node -v`) and PNPm (`pnpm -v`).
 
-1. Use `git` to clone this repository with `git clone https://github.com/Vexcited/tetrio-self-proxy`
-2. Go into the created folder, `cd tetrio-self-proxy`
+1. Use `git` to clone this repository with `git clone https://github.com/Vexcited/tetrio-proxy`
+2. Go into the created folder, `cd tetrio-proxy`
 3. Install the dependencies, `pnpm install`
 4. Run `pnpm refresh` to install/update the game files from TETR.IO
-5. Run `pnpm start` and the web server will start on port `4080` by default.
+5. Run `pnpm start` and the web server will start on port `4080`, by default.
+
+## Credits
+
+* [Me](https://github.com/Vexcited)
+* My school - that restricts every single games.
+
