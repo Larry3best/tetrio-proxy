@@ -5,8 +5,8 @@ import proxy from "./proxy/index.js";
 const app = express();
 
 app.use(tinyws());
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.json({ limit: "100mb" }));
+app.use(express.urlencoded({ limit: "100mb", extended: false }));
 
 /** This is where we serve the TETR.IO static files. */
 const public_path = new URL("../public", import.meta.url).pathname;
