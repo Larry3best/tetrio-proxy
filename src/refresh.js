@@ -80,6 +80,7 @@ const RES_BGMS = [
   "suiu",
   "go-go-go-summer",
   "freshherb-wreath-wo-genkan-ni",
+  "hyper-velocity",
   
   /** Calm exclusives */
   "kaze-no-sanpomichi",
