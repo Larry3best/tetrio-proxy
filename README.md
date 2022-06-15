@@ -1,6 +1,6 @@
 # TETR.IO - Self-Proxy
 
-> This proxy is mainly used to bypass restrictions in some networks. Also, **this script is not associated with or created by [TETR.IO](https://tetr.io) or [osk](https://osk.sh)**.
+> This proxy is mainly used to bypass restrictions in so.me networks. Also, **this script is not associated with or created by [TETR.IO](https://tetr.io) or [osk](https://osk.sh)**.
 
 ## Motivation
 
@@ -14,20 +14,31 @@ play TETR.IO without any restrictions !
 
 Basically, we download all the resources from TETR.IO and serve them ourselves so we can bypass the Cloudflare browser check - that a lot of online proxies can't actually pass.
 
-For API endpoints, we proxy them by updating the endpointsin the `public/js/tetrio.js` and `public/index.html` files.
-
 ## Usage
 
-Before following these steps, check if you have installed Node.JS (`node -v`) and PNPm (`pnpm -v`).
+Before following these steps, check if you have installed Node.JS and PNPm.
 
 1. Use `git` to clone this repository with `git clone https://github.com/Vexcited/tetrio-proxy`
 2. Go into the created folder, `cd tetrio-proxy`
-3. Install the dependencies, `pnpm install`
+3. Install the dependencies, `pnpm install`. You can also optionally [update the `index.html` file, manually](#update-the-publicindexhtml-file). You should do that **if the app can't load anymore**, otherwise don't touch the `public/index.html`.
 4. Run `pnpm refresh` to install/update the game files from TETR.IO
 5. Run `pnpm start` and the web server will start on port `4080`, by default.
 
-## Credits
+### Update the `/public/index.html` file
 
-* [Me](https://github.com/Vexcited)
-* My school - that restricts every single games.
+Open a web browser and go to `https://tetr.io`. Wait for the CF browser check to complete and wait until TETR.IO is loaded.
 
+Now, open the DevTools with **F12** and head on to the **Sources** tab.
+
+In `top>tetr.io>`, you'll find `index.html`. Right click on it and **Save as** `index.html` somewhere.
+
+Now move this file to the root `public` folder
+of this repository.
+
+### `public` folder structure
+
+* `./css/`, should only contain `tetrio.css`.
+* `./js/`, should only contain `tetrio.js`.
+* `./res/*`, contains all the resources.
+* `./sfx`, should only contain `tetrio.ogg`.
+* `index.html`
